@@ -97,7 +97,7 @@ if (modrinthId.isNotEmpty()) {
         versionNumber.set("${project.version}")
         versionType.set("release")
         uploadFile.set(tasks["remapJar"])
-        gameVersions.set(listOf("1.20.1", "1.20.2"))
+        gameVersions.set(listOf("1.21.1"))
         loaders.set(listOf("fabric", "quilt"))
         changelog.set(changelogText)
         syncBodyFrom.set(file("README.md").readText())
@@ -119,11 +119,10 @@ if (hasProperty("curseforge.token") && curseforgeId.isNotEmpty()) {
 
             id = curseforgeId
             releaseType = "release"
-            addGameVersion("1.20.1")
-            addGameVersion("1.20.2")
+            addGameVersion("1.21.1")
             addGameVersion("Fabric")
             addGameVersion("Quilt")
-            addGameVersion("Java 17")
+            addGameVersion("Java 21")
 
             changelog = changelogText
             changelogType = "markdown"
